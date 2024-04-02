@@ -154,7 +154,7 @@ a.account_register_email:hover {
 }
 
 .left_column {
-  background-image: url(ancient-greece-race.webp);
+  background-image: url(images/ancient-greece-race.webp);
 }
 .center_column {
   display: flex;
@@ -168,7 +168,7 @@ a.account_register_email:hover {
   min-width: 400px;
 }
 .right_column {
-  background-image: url(ancient-greece-horse-race.webp);
+  background-image: url(images/ancient-greece-horse-race.webp);
 }
 
 .disclaimer {
@@ -289,7 +289,7 @@ footer ul.links li {
 
   #mobile .header {
     height: 135vw;
-    background-image: url(ancient-greece-race-mobile.webp);
+    background-image: url(images/ancient-greece-race-mobile.webp);
     position: relative;
 
     color: white;
@@ -374,7 +374,7 @@ footer ul.links li {
   }
 
   #who .wrestling {
-    background-image: url(greek-wrestling-mobile.webp);
+    background-image: url(images/greek-wrestling-mobile.webp);
     background-size: cover;
     background-position: center;
     height: 90vw;
