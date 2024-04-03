@@ -8,7 +8,7 @@ const MENU_CLOSE = 'images/xmark-solid.svg';
 
 menu.addEventListener('click', onMenuClicked);
 
-// Open the side menu panel on click.
+// Open and close the side menu panel.
 function onMenuClicked(event) {
   event.stopPropagation();
 

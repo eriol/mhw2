@@ -21,7 +21,7 @@ header {
   z-index: 1;
 }
 
-nav {
+#navtop {
   padding: 10px 80px;
   background-color: white;
   height: var(--nav-height);
@@ -31,7 +31,7 @@ nav {
   align-items: center;
 }
 
-nav ul {
+#navtop ul {
   display: flex;
 }
 
@@ -40,7 +40,7 @@ ul.links {
   padding: 0px;
 }
 
-nav li {
+#navtop li {
   padding: 0px 30px;
   font-size: 1.1em;
 }
@@ -104,13 +104,32 @@ a.button:hover {
   text-decoration: none;
 }
 
+.text-normal {
+  font-size: 1.1em;
+}
+
+.text-big {
+  font-size: 1.5em;
+}
+
+.button-wide {
+  display: block;
+  padding: 20px;
+  text-align: center;
+  font-size: 1em;
+  margin-bottom: 10px;
+}
+
+.button-100 {
+  width: 100%;
+  display: block;
+}
+
 .account_register_email {
   background-color: var(--primary-color);
   border-color: var(--primary-color);
   color: white;
   font-size: 1em;
-  display: block;
-  width: 100%;
 }
 
 a.account_register_email:hover {
@@ -217,11 +236,11 @@ footer ul.links li {
 }
 
 @media (max-width: 700px) {
-  nav {
+  #navtop {
     padding: 10px;
   }
 
-  nav ul {
+  #navtop ul {
     display: none;
   }
 
@@ -250,7 +269,7 @@ footer ul.links li {
     height: 20px;
   }
 
-  nav ul {
+  #navtop ul {
     display: none;
   }
 
@@ -278,6 +297,19 @@ footer ul.links li {
     width: 100vw;
     background-color: rgba(0, 0, 0, 0.7);
     z-index: 2;
+  }
+
+  #navleft {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #navleft li {
+    padding: 10px 0px;
+  }
+
+  #panel_links {
+    padding: var(--nav-height) 20px;
   }
 
   #mobile {

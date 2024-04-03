@@ -18,7 +18,7 @@
   </head>
   <body>
     <header>
-      <nav>
+      <nav id="navtop">
         <div id="logo_and_links">
           <a id="menu">
             <img src="images/bars-solid.svg" data-state="open" />
@@ -38,7 +38,36 @@
         </div>
         <a class="button">Accedi</a>
       </nav>
-      <section id="menu_panel" class="hidden"></section>
+      <section id="menu_panel" class="hidden">
+        <nav id="navleft">
+          <div id="panel_links">
+            <ul class="links text-big">
+              <li>
+                <a href="#">Home</a>
+              </li>
+              <li>
+                <a href="#">Funzioni</a>
+              </li>
+              <li>
+                <a href="#">Sfide</a>
+              </li>
+            </ul>
+            <hr />
+            <ul class="links text-normal">
+              <li>
+                <a href="#">Abbonati</a>
+              </li>
+              <li>
+                <a href="#">Assistenza</a>
+              </li>
+            </ul>
+            <a class="button button-wide">Accedi</a>
+            <a class="button button-wide account_register_email">
+              Iscriviti con l'indirizzo email
+            </a>
+          </div>
+        </nav>
+      </section>
       <section id="menu_modal" class="hidden"></section>
     </header>
 
@@ -55,7 +84,7 @@
             Sei già in ἀθλητική?
             <a class="has-primary-color is-bold" href="#">Accedi</a>
           </p>
-          <a class="button account_register_email">
+          <a class="button button-100 account_register_email">
             Iscriviti con l'indirizzo email
           </a>
           <p class="disclaimer">
