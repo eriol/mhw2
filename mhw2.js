@@ -22,6 +22,7 @@ const subscriptionExploreButton = document.querySelector(
   '#subscription-explore',
 );
 const subscriptionMore = document.querySelector('#subscription-more');
+const fidippide = document.querySelector('.fidippide');
 
 // Open and close the side menu panel.
 function onMenuClicked(event) {
@@ -100,6 +101,11 @@ function onSubscriptionExploreClicked(event) {
   }
 }
 
+// Change Fidippide name taking the new value from a data attribute.
+function changeFidippide(event) {
+  fidippide.textContent = fidippide.dataset.name;
+}
+
 menu.addEventListener('click', onMenuClicked);
 desktopRightColumn.addEventListener('mouseover', onDesktopRightColumnMouseOver);
 desktopRightColumn.addEventListener('mouseout', onDesktopRightColumnMouseOut);
@@ -108,3 +114,4 @@ subscriptionExploreButton.addEventListener(
   'click',
   onSubscriptionExploreClicked,
 );
+fidippide.addEventListener('mouseover', changeFidippide);
