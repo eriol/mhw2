@@ -30,11 +30,9 @@ function onMenuClicked(event) {
 // Change desktop right column background image on mouseover
 // and mouseout.
 function onDesktopRightColumnMouseOver(event) {
-  console.log('over');
   event.currentTarget.style.backgroundImage = DESKTOP_RCOL_BCK_IMAGE2;
 }
 function onDesktopRightColumnMouseOut(event) {
-  console.log('out');
   event.currentTarget.style.backgroundImage = DESKTOP_RCOL_BCK_IMAGE;
 }
 
