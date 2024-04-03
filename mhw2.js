@@ -88,6 +88,8 @@ function onFeatureMoreClickToClose(event) {
   button.addEventListener('click', onFeatureMoreClickToOpen);
 }
 
+// Open and close more subscription section.
+// It change/restore also the explore button.
 function onSubscriptionExploreClicked(event) {
   subscriptionMore.classList.toggle('hidden');
   const button = event.currentTarget;
