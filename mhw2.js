@@ -5,8 +5,10 @@ const menuIcon = document.querySelector('#menu img');
 
 const MENU_OPEN = 'images/bars-solid.svg';
 const MENU_CLOSE = 'images/xmark-solid.svg';
+const DESKTOP_RCOL_BCK_IMAGE = 'url(images/ancient-greece-horse-race.webp)';
+const DESKTOP_RCOL_BCK_IMAGE2 = 'url(images/ancient-greece-boxing.webp)';
 
-menu.addEventListener('click', onMenuClicked);
+const desktopRightColumn = document.querySelector('.right_column');
 
 // Open and close the side menu panel.
 function onMenuClicked(event) {
@@ -25,3 +27,19 @@ function onMenuClicked(event) {
     menuIcon.src = MENU_OPEN;
   }
 }
+
+// Change desktop right column background image on mouseover
+// and mouseout.
+function onDesktopRightColumnMouseOver(event) {
+  console.log('over');
+  event.currentTarget.style.backgroundImage = DESKTOP_RCOL_BCK_IMAGE2;
+}
+function onDesktopRightColumnMouseOut(event) {
+  console.log('out');
+  event.currentTarget.style.backgroundImage = DESKTOP_RCOL_BCK_IMAGE;
+}
+
+menu.addEventListener('click', onMenuClicked);
+
+desktopRightColumn.addEventListener('mouseover', onDesktopRightColumnMouseOver);
+desktopRightColumn.addEventListener('mouseout', onDesktopRightColumnMouseOut);
