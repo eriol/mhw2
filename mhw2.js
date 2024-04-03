@@ -1,13 +1,12 @@
-const menu = document.querySelector('#menu');
-const menuPanel = document.querySelector('#menu_panel');
-const menuModal = document.querySelector('#menu_modal');
-const menuIcon = document.querySelector('#menu img');
-
 const MENU_OPEN = 'images/bars-solid.svg';
 const MENU_CLOSE = 'images/xmark-solid.svg';
 const DESKTOP_RCOL_BCK_IMAGE = 'url(images/ancient-greece-horse-race.webp)';
 const DESKTOP_RCOL_BCK_IMAGE2 = 'url(images/ancient-greece-boxing.webp)';
 
+const menu = document.querySelector('#menu');
+const menuPanel = document.querySelector('#menu_panel');
+const menuModal = document.querySelector('#menu_modal');
+const menuIcon = document.querySelector('#menu img');
 const desktopRightColumn = document.querySelector('.right_column');
 
 // Open and close the side menu panel.
