@@ -18,6 +18,10 @@ const menuIcon = document.querySelector('#menu img');
 const desktopRightColumn = document.querySelector('.right_column');
 const featureExploreButton = document.querySelector('#features-explore');
 const featureMore = document.querySelector('#features-more');
+const subscriptionExploreButton = document.querySelector(
+  '#subscription-explore',
+);
+const subscriptionMore = document.querySelector('#subscription-more');
 
 // Open and close the side menu panel.
 function onMenuClicked(event) {
@@ -84,7 +88,21 @@ function onFeatureMoreClickToClose(event) {
   button.addEventListener('click', onFeatureMoreClickToOpen);
 }
 
+function onSubscriptionExploreClicked(event) {
+  subscriptionMore.classList.toggle('hidden');
+  const button = event.currentTarget;
+  if (button.textContent === 'ESPLORA') {
+    button.textContent = 'CHIUDI';
+  } else {
+    button.textContent = 'ESPLORA';
+  }
+}
+
 menu.addEventListener('click', onMenuClicked);
 desktopRightColumn.addEventListener('mouseover', onDesktopRightColumnMouseOver);
 desktopRightColumn.addEventListener('mouseout', onDesktopRightColumnMouseOut);
 featureExploreButton.addEventListener('click', onFeatureMoreClickToOpen);
+subscriptionExploreButton.addEventListener(
+  'click',
+  onSubscriptionExploreClicked,
+);
