@@ -70,28 +70,6 @@ a:hover {
   overflow: hidden;
 }
 
-#menu_panel {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 100vh;
-  width: 80%;
-  background-color: var(--footer-background-color);
-  z-index: 3;
-}
-
-#menu_modal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 100vh;
-  width: 100vw;
-  background-color: rgba(0, 0, 0, 0.7);
-  z-index: 2;
-}
-
 #logo_and_links {
   display: flex;
   align-items: center;
@@ -278,6 +256,28 @@ footer ul.links li {
 
   #desktop {
     display: none;
+  }
+
+  #menu_panel {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100vh;
+    width: 80%;
+    background-color: var(--footer-background-color);
+    z-index: 3;
+  }
+
+  #menu_modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 2;
   }
 
   #mobile {
