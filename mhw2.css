@@ -1,5 +1,6 @@
 :root {
   --primary-color: #fc5200;
+  --primary-color-fade: #fc5200c4;
   --footer-background-color: #f9f8f5;
   --footer-color: #525252;
   --hover-register-button-color: #bf3e00;
@@ -63,7 +64,7 @@ a:hover {
 }
 
 .hidden {
-  display: none;
+  display: none !important;
 }
 
 .no-scroll {
@@ -368,6 +369,7 @@ footer ul.links li {
 
   #who,
   #features,
+  #features-more,
   #subscription {
     width: 100%;
 
@@ -385,6 +387,7 @@ footer ul.links li {
   }
 
   #features,
+  #features-more,
   #subscription {
     height: 50vw;
     color: white;
@@ -416,6 +419,16 @@ footer ul.links li {
 
   #features {
     background-color: var(--primary-color);
+  }
+
+  #features-more {
+    background-color: var(--primary-color-fade);
+    text-align: center;
+    font-size: 1.1em;
+  }
+
+  #features-more div {
+    padding: 0px 10px;
   }
 
   #subscription {

@@ -2,12 +2,22 @@ const MENU_OPEN = 'images/bars-solid.svg';
 const MENU_CLOSE = 'images/xmark-solid.svg';
 const DESKTOP_RCOL_BCK_IMAGE = 'url(images/ancient-greece-horse-race.webp)';
 const DESKTOP_RCOL_BCK_IMAGE2 = 'url(images/ancient-greece-boxing.webp)';
+const features = [
+  'Misura le tue prestazioni.',
+  'Entra in contatto con gli amici e condividi la tua avventura.',
+  'Monitora e analizza tutti gli aspetti della tua attività.',
+  'ἀθλητική è il social network per gli atleti.',
+  'Esplora nuovi percorsi e competi con una comunità globale.',
+];
+const MAX_CHOICES = 3;
 
 const menu = document.querySelector('#menu');
 const menuPanel = document.querySelector('#menu_panel');
 const menuModal = document.querySelector('#menu_modal');
 const menuIcon = document.querySelector('#menu img');
 const desktopRightColumn = document.querySelector('.right_column');
+const featureExploreButton = document.querySelector('#features-explore');
+const featureMore = document.querySelector('#features-more');
 
 // Open and close the side menu panel.
 function onMenuClicked(event) {
@@ -36,7 +46,45 @@ function onDesktopRightColumnMouseOut(event) {
   event.currentTarget.style.backgroundImage = DESKTOP_RCOL_BCK_IMAGE;
 }
 
-menu.addEventListener('click', onMenuClicked);
+// Choose 3 random features and display them.
+// We also change the button text on click.
+function onFeatureMoreClickToOpen(event) {
+  const already_choosen = new Set();
+  featureMore.innerHTML = '';
 
+  for (let i = 0; i < MAX_CHOICES; i++) {
+    while (true) {
+      const index = Math.floor(Math.random() * features.length);
+      if (already_choosen.has(index)) {
+        continue;
+      }
+      already_choosen.add(index);
+      break;
+    }
+  }
+  for (const index of already_choosen) {
+    const newDiv = document.createElement('div');
+    newDiv.textContent = features[index];
+    featureMore.appendChild(newDiv);
+  }
+
+  featureMore.classList.remove('hidden');
+  const button = event.currentTarget;
+  button.textContent = 'CHIUDI';
+  button.removeEventListener('click', onFeatureMoreClickToOpen);
+  button.addEventListener('click', onFeatureMoreClickToClose);
+}
+
+// Close the more features section and restore the button.
+function onFeatureMoreClickToClose(event) {
+  featureMore.classList.add('hidden');
+  const button = event.currentTarget;
+  button.textContent = 'ESPLORA';
+  button.removeEventListener('click', onFeatureMoreClickToClose);
+  button.addEventListener('click', onFeatureMoreClickToOpen);
+}
+
+menu.addEventListener('click', onMenuClicked);
 desktopRightColumn.addEventListener('mouseover', onDesktopRightColumnMouseOver);
 desktopRightColumn.addEventListener('mouseout', onDesktopRightColumnMouseOut);
+featureExploreButton.addEventListener('click', onFeatureMoreClickToOpen);
