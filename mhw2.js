@@ -28,7 +28,7 @@ const fidippide = document.querySelector('.fidippide');
 function onMenuClicked(event) {
   event.stopPropagation();
 
-  menuPanel.classList.toggle('hidden');
+  menuPanel.classList.toggle('show');
   menuModal.classList.toggle('hidden');
   document.body.classList.toggle('no-scroll');
   // We use a data attribute to save the menu state in order
