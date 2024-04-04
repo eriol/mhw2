@@ -13,6 +13,7 @@ const MAX_CHOICES = 3;
 
 const menu = document.querySelector('#menu');
 const menuPanel = document.querySelector('#menu_panel');
+const menuPanelNav = document.querySelector('#menu_panel nav');
 const menuModal = document.querySelector('#menu_modal');
 const menuIcon = document.querySelector('#menu img');
 const desktopRightColumn = document.querySelector('.right_column');
@@ -29,6 +30,7 @@ function onMenuClicked(event) {
   event.stopPropagation();
 
   menuPanel.classList.toggle('show');
+  menuPanelNav.classList.toggle('show');
   menuModal.classList.toggle('hidden');
   document.body.classList.toggle('no-scroll');
   // We use a data attribute to save the menu state in order

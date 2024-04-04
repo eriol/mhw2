@@ -8,6 +8,7 @@
   --subscription-background-color-fade: #2b2b2bc4;
   --who-color: #525252;
   --nav-height: 66px;
+  --panel-menu-transition-time: 600ms;
 }
 
 body {
@@ -291,8 +292,8 @@ footer ul.links li {
 
     display: none;
     transition:
-      width 800ms linear,
-      display 1s allow-discrete;
+      width var(--panel-menu-transition-time) linear,
+      display var(--panel-menu-transition-time) allow-discrete;
   }
 
   /* We need a more specific rule to not use !important here. */
@@ -300,8 +301,17 @@ footer ul.links li {
     display: block;
     width: 80%;
     transition:
-      width 800ms linear,
-      display 1s allow-discrete;
+      width var(--panel-menu-transition-time) linear,
+      display var(--panel-menu-transition-time) allow-discrete;
+  }
+
+  #menu_panel nav {
+    opacity: 0;
+  }
+
+  #menu_panel nav.show {
+    opacity: 1;
+    transition: opacity 500ms linear;
   }
 
   /* This is needed for transitions that involve display.  */
