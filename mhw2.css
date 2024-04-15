@@ -65,6 +65,10 @@ a:hover {
   z-index: 4;
 }
 
+#menu_panel {
+  display: none;
+}
+
 .hidden {
   display: none !important;
 }
